@@ -1,0 +1,16 @@
+Run MainWindow for reading OIDS
+Run AgentReader to track all interfaces
+Run TrapAgent to listen for Traps
+
+
+CLI commands for Trap:
+conf t
+snmp-server enable trap bgp
+snmp-server host 192.168.122.1 traps version 2c public udp-port 2000 bgp
+end
+clear ip bgp *
+
+OID file template:
+[OID_NAME]=[OID_NUMBER]
+ex: 
+ip=1.3.5.6
